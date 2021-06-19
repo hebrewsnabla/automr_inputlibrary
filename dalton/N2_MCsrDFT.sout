@@ -1,0 +1,35 @@
+INFO: DALTON_TMPDIR not defined by user.
+INFO: Guessing /tmp is an appropriate scratch directory, and DALTON_TMPDIR is set to this directory
+
+   ******************************************* 
+   **** OUTPUT FROM DALTON SHELL SCRIPT
+   ******************************************* 
+
+   DALTON release Dalton2020.0 (2020)
+
+   Invocation: /home/wsr/dalton/build/dalton -gb 1 -omp 1 -ow N2_MCsrDFT N2_uhf_gvb5_2CASSCF
+
+   Sat Jun 19 04:51:11 PM CST 2021
+
+   Calculation: N2_MCsrDFT_N2_uhf_gvb5_2CASSCF  (input files: N2_MCsrDFT.dal and N2_uhf_gvb5_2CASSCF.mol)
+   PID        : 1651314
+   Input dir  : /home/wsr/automr_inputlibrary/dalton
+   Scratch dir: /tmp/DALTON_scratch_wsr/N2_MCsrDFT_N2_uhf_gvb5_2CASSCF_1651314
+
+
+ DALTON: user specified work memory size used,
+         environment variable WRKMEM = "131072000"
+
+ Work memory size (LMWORK+2):   131072002 = 1000.00 megabytes; node   0
+
+   0: Directories for basis set searches:
+     /home/wsr/automr_inputlibrary/dalton:/home/wsr/dalton/build/basis
+N2_MCsrDFT_N2_uhf_gvb5_2CASSCF.tar.gz has been copied to /home/wsr/automr_inputlibrary/dalton
+Output is in /home/wsr/automr_inputlibrary/dalton/N2_MCsrDFT_N2_uhf_gvb5_2CASSCF.out as requested in input.
+----------------------------------------------------------
+1 informational messages have been issued by DALTON,
+output from 'grep -n INFO'  (max 10 lines):
+636: INFO: .DOSRIN option is obsolete
+
+   Sat Jun 19 04:51:33 PM CST 2021
+   ***************************************** 

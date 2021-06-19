@@ -1,0 +1,87 @@
+----- Output of AutoMR of MOKIT(Molecular Orbital Kit) -----
+        GitLab page: https://gitlab.com/jxzou/mokit
+                    Author: jxzou
+                   Version: 1.2.3
+         (How to cite: read the file Citation.txt)
+
+HOST archlab, Sat Jun 19 16:43:27 2021
+
+Read program paths from environment variables:
+MOKIT_ROOT  = /home/wsr/mokit
+gau_path    = /home/wsr/g16/g16
+gms_path    = /home/wsr/gamess/rungms
+orca_path   = /home/wsr/orca_4_2_1_linux_x86-64_openmpi314/orca
+molcas_path = /home/wsr/.local/modules/bin/pymolcas
+molpro_path = NOT FOUND
+bdf_path    = NOT FOUND
+psi4_path   = NOT FOUND
+
+memory =   1GB, nproc =   1, method/basis = casscf/cc-pvdz
+
+Keywords in MOKIT{} are merged and shown as follows:
+casscf_prog=dalton
+
+No. Strategy = 0
+readRHF = F   readUHF = F   readNO  = F   skipHF  = F   Cart    = F
+Vir_Proj= F   UNO     = T   GVB     = T   CASCI   = F   CASSCF  = T
+DMRGCI  = F   DMRGSCF = F   CASPT2  = F   NEVPT2  = F   MRMP2   = F
+SDSPT2  = F   MRCISD  = F   MCPDFT  = F   NEVPT3  = F   CASPT3  = F
+CIonly  = F   dyn_corr= F   DKH2    = F   X2C     = F   RI      = F
+FIC     = F   DLPNO   = F   F12     = F   TenCycle= T   HardWFN = F
+CrazyWFN= F   BgCharge= F   Ana_Grad= F   CtrType = 0   MaxM    = 1000
+NMR     = F   ON_thres= 0.99999
+LocalM  = pm  OtPDF = NONE  RIJK_bas=NONE RIC_bas=NONE F12_cabs=NONE
+HF_fch = NONE
+
+Check if the keywords are compatible with each other...
+Check done. All keywords are compatible.
+
+
+Enter subroutine do_hf...
+Fragment guess required. Only UHF will be performed.
+HF using program gaussian
+
+E(UHF) =      -108.76940574 a.u., <S**2>=  2.758
+Strategy updated:
+
+No. Strategy = 1
+readRHF = F   readUHF = F   readNO  = F   skipHF  = F   Cart    = F
+Vir_Proj= F   UNO     = T   GVB     = T   CASCI   = F   CASSCF  = T
+DMRGCI  = F   DMRGSCF = F   CASPT2  = F   NEVPT2  = F   MRMP2   = F
+SDSPT2  = F   MRCISD  = F   MCPDFT  = F   NEVPT3  = F   CASPT3  = F
+CIonly  = F   dyn_corr= F   DKH2    = F   X2C     = F   RI      = F
+FIC     = F   DLPNO   = F   F12     = F   TenCycle= T   HardWFN = F
+CrazyWFN= F   BgCharge= F   Ana_Grad= F   CtrType = 0   MaxM    = 1000
+NMR     = F   ON_thres= 0.99999
+LocalM  = pm  OtPDF = NONE  RIJK_bas=NONE RIC_bas=NONE F12_cabs=NONE
+HF_fch = NONE
+Leave subroutine do_hf at Sat Jun 19 16:43:30 2021
+
+
+Enter subroutine get_paired_LMO...
+Two sets of MOs, ist=1, invoke UNO associated rotation.
+$python N2_uhf_uno_asrot.py >N2_uhf_uno_asrot.out 2>&1
+Leave subroutine get_paired_LMO at Sat Jun 19 16:43:30 2021
+
+
+Enter subroutine do_gvb...
+gms_scr_path = /home/wsr/scratch/gamess
+nbf =   28    nif =   28
+doubly_occ=    2    npair=    5    nopen=    0    nvir=   16
+$fch2inp N2_uhf_uno_asrot.fch -gvb 5 -open 0
+
+E(GVB) =      -108.72383671 a.u.
+Leave subroutine do_gvb at Sat Jun 19 16:43:35 2021
+
+
+Enter subroutine do_cas...
+CASSCF(6,6) using program dalton
+doubly_occ=   4    nvir=  18    RIJK= F
+No. of active alpha/beta e = 3/3
+$dalton -gb 1 -omp 1 -ow N2_uhf_gvb5_2CASSCF >N2_uhf_gvb5_2CASSCF.sout 2>&1
+
+E(CASCI)  =      -108.78854100 a.u.
+E(CASSCF) =      -108.78966141 a.u.
+Leave subroutine do_cas at Sat Jun 19 16:43:37 2021
+
+Normal termination of AutoMR at Sat Jun 19 16:43:37 2021
