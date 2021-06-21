@@ -1,0 +1,10 @@
+%nproc=8
+%mem=10gb
+#p casscf/tzvp guess(fragment=2) 
+
+mokit{crazywfn }
+
+0 1 0 7 0 -7
+Cr(fragment=1) 0.0 0.0 0.0
+Cr(fragment=2) 0.0 0.0 2.0
+
