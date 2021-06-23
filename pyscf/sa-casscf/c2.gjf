@@ -1,0 +1,9 @@
+%nproc=1
+%mem=1gb
+# casscf/cc-pvdz
+
+mokit{casscf_prog=pyscf}
+
+0 1
+C 0.0 0.0 0.0
+C 0.0 0.0 1.24
