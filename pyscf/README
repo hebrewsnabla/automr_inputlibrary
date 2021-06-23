@@ -1,0 +1,12 @@
+# MOKIT - PySCF examples
+
+### SA-CASSCF
+```
+automr xxx.gjf > xxx.out
+# copy xxxxx_2CASSCF.py to xxxxx_SA-CASSCF.py
+# modify xxxxx_SA-CASSCF.py:
+## line 94: read xxx_CASSCF_NO.fch instead of gvb's fch
+## line 105: add state_average_()
+## line 109: don't fix spin
+python xxxxx_SA-CASSCF.py > yyy.out
+```
