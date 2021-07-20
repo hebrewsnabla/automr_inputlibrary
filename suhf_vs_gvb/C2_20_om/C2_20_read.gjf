@@ -1,0 +1,10 @@
+%nproc=8
+%mem=10gb
+#p casscf(8,8)/def2tzvp 
+
+mokit{crazywfn, readno='C2_20_uhf_SUHFNO.fch', ist=5, casscf_prog=openmolcas}
+
+0 1 
+C 0.0 0.0 0.0
+C 0.0 0.0 2.0
+

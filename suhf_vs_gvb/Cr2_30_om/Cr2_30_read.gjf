@@ -1,0 +1,7 @@
+%nproc=24
+%mem=10gb
+#p casscf/def2tzvp  
+
+mokit{crazywfn,casscf_prog=openmolcas, readno='Cr2_30_uhf_SUHFNO.fch', ist=5 }
+
+
