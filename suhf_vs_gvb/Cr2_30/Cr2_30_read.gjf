@@ -1,0 +1,7 @@
+%nproc=8
+%mem=10gb
+#p casscf/def2tzvp  
+
+mokit{crazywfn, readno='Cr2_30_uhf_SUHFNO.fch', ist=5 }
+
+

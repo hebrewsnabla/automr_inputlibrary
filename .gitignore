@@ -3,4 +3,5 @@
 *.gms
 *.dat
 *.RST
-
+core*
+/test/

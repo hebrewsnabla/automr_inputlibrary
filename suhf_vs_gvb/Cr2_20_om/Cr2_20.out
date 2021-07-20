@@ -1,0 +1,76 @@
+----- Output of AutoMR of MOKIT(Molecular Orbital Kit) -----
+        GitLab page: https://gitlab.com/jxzou/mokit
+                    Author: jxzou
+                   Version: 1.2.3
+         (How to cite: read the file Citation.txt)
+
+HOST xc02n12, Mon Jul  5 13:57:21 2021
+
+Read program paths from environment variables:
+MOKIT_ROOT  = /share/home/srwang/mokit
+gau_path    = /share/apps/gaussian/G09C01Z/srwang-mod-2020/g09/g09
+gms_path    = /share/home/srwang/gamess/rungms
+orca_path   = /share/apps/ORCA/orca_4_2_1_linux_x86-64_openmpi314/orca
+molcas_path = /share/home/srwang/Modules/bin/pymolcas
+molpro_path = /share/apps/scripts/molpro
+bdf_path    = NOT FOUND
+psi4_path   = NOT FOUND
+
+memory =  10GB, nproc =   8, method/basis = casscf/def2tzvp
+
+Keywords in MOKIT{} are merged and shown as follows:
+crazywfn
+
+No. Strategy = 0
+readRHF = F   readUHF = F   readNO  = F   skipHF  = F   Cart    = F
+Vir_Proj= F   UNO     = T   GVB     = T   CASCI   = F   CASSCF  = T
+DMRGCI  = F   DMRGSCF = F   CASPT2  = F   NEVPT2  = F   MRMP2   = F
+SDSPT2  = F   MRCISD  = F   MCPDFT  = F   NEVPT3  = F   CASPT3  = F
+CIonly  = F   dyn_corr= F   DKH2    = F   X2C     = F   RI      = F
+FIC     = F   DLPNO   = F   F12     = F   TenCycle= T   HardWFN = F
+CrazyWFN= T   BgCharge= F   Ana_Grad= F   CtrType = 0   MaxM    = 1000
+NMR     = F   ON_thres= 0.99999
+LocalM  = pm  OtPDF = NONE  RIJK_bas=NONE RIC_bas=NONE F12_cabs=NONE
+HF_fch = NONE
+
+Check if the keywords are compatible with each other...
+Check done. All keywords are compatible.
+
+
+Enter subroutine do_hf...
+Fragment guess required. Only UHF will be performed.
+HF using program gaussian
+
+E(UHF) =     -2086.59265731 a.u., <S**2>=  5.299
+Strategy updated:
+
+No. Strategy = 1
+readRHF = F   readUHF = F   readNO  = F   skipHF  = F   Cart    = F
+Vir_Proj= F   UNO     = T   GVB     = T   CASCI   = F   CASSCF  = T
+DMRGCI  = F   DMRGSCF = F   CASPT2  = F   NEVPT2  = F   MRMP2   = F
+SDSPT2  = F   MRCISD  = F   MCPDFT  = F   NEVPT3  = F   CASPT3  = F
+CIonly  = F   dyn_corr= F   DKH2    = F   X2C     = F   RI      = F
+FIC     = F   DLPNO   = F   F12     = F   TenCycle= T   HardWFN = F
+CrazyWFN= T   BgCharge= F   Ana_Grad= F   CtrType = 0   MaxM    = 1000
+NMR     = F   ON_thres= 0.99999
+LocalM  = pm  OtPDF = NONE  RIJK_bas=NONE RIC_bas=NONE F12_cabs=NONE
+HF_fch = NONE
+Leave subroutine do_hf at Mon Jul  5 13:57:28 2021
+
+
+Enter subroutine get_paired_LMO...
+Two sets of MOs, ist=1, invoke UNO associated rotation.
+$python Cr2_20_uhf_uno_asrot.py >Cr2_20_uhf_uno_asrot.out 2>&1
+Leave subroutine get_paired_LMO at Mon Jul  5 13:57:29 2021
+
+
+Enter subroutine do_gvb...
+gms_scr_path = /scratch/scr/srwang/gamess
+nbf =   90    nif =   90
+doubly_occ=   14    npair=   10    nopen=    0    nvir=   56
+$fch2inp Cr2_20_uhf_uno_asrot.fch -gvb 10 -open 0
+
+ERROR in subroutine read_gvb_energy_from_gms: no GVB energy found in
+file Cr2_20_uhf_uno_asrot2gvb10.gms. You can open this file and check
+whether the SCF oscillates. If yes, reducing the number of processors and re-run
+may do dome help.

@@ -1,0 +1,55 @@
+----- Output of AutoMR of MOKIT(Molecular Orbital Kit) -----
+        GitLab page: https://gitlab.com/jxzou/mokit
+                    Author: jxzou
+                   Version: 1.2.3
+         (How to cite: read the file Citation.txt)
+
+HOST xc02n12, Mon Jul  5 15:33:52 2021
+
+Read program paths from environment variables:
+MOKIT_ROOT  = /share/home/srwang/mokit
+gau_path    = /share/apps/gaussian/G09C01Z/srwang-mod-2020/g09/g09
+gms_path    = /share/home/srwang/gamess/rungms
+orca_path   = /share/apps/ORCA/orca_4_2_1_linux_x86-64_openmpi314/orca
+molcas_path = /share/home/srwang/Modules/bin/pymolcas
+molpro_path = /share/apps/scripts/molpro
+bdf_path    = NOT FOUND
+psi4_path   = NOT FOUND
+
+memory =  10GB, nproc =  24, method/basis = casscf/def2tzvp
+
+Keywords in MOKIT{} are merged and shown as follows:
+crazywfn,casscf_prog=openmolcas, readno='Cr2_40_uhf_SUHFNO.fch', ist=5
+
+No. Strategy = 5
+readRHF = F   readUHF = F   readNO  = T   skipHF  = T   Cart    = F
+Vir_Proj= F   UNO     = T   GVB     = F   CASCI   = F   CASSCF  = T
+DMRGCI  = F   DMRGSCF = F   CASPT2  = F   NEVPT2  = F   MRMP2   = F
+SDSPT2  = F   MRCISD  = F   MCPDFT  = F   NEVPT3  = F   CASPT3  = F
+CIonly  = F   dyn_corr= F   DKH2    = F   X2C     = F   RI      = F
+FIC     = F   DLPNO   = F   F12     = F   TenCycle= T   HardWFN = F
+CrazyWFN= T   BgCharge= F   Ana_Grad= F   CtrType = 0   MaxM    = 1000
+NMR     = F   ON_thres= 0.99999
+LocalM  = pm  OtPDF = NONE  RIJK_bas=NONE RIC_bas=NONE F12_cabs=NONE
+HF_fch = Cr2_40_uhf_SUHFNO.fch
+
+Check if the keywords are compatible with each other...
+Check done. All keywords are compatible.
+
+
+Enter subroutine do_hf...
+Provided .fch(k) file. Skip the RHF/UHF step...
+Leave subroutine do_hf at Mon Jul  5 15:33:52 2021
+
+
+Enter subroutine do_cas...
+CASSCF(12,12) using program openmolcas
+doubly_occ=  18    nvir=  60    RIJK= F
+No. of active alpha/beta e = 6/6
+$pymolcas Cr2_40_uhf_SUHFNO_CASSCF.input >Cr2_40_uhf_SUHFNO_CASSCF.out 2>&1
+
+E(CASCI)  =     -2086.67117016 a.u.
+E(CASSCF) =     -2086.67117394 a.u.
+Leave subroutine do_cas at Mon Jul  5 15:37:24 2021
+
+Normal termination of AutoMR at Mon Jul  5 15:37:24 2021

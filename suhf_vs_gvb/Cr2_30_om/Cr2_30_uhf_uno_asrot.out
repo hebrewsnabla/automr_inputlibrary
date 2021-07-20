@@ -1,0 +1,77 @@
+
+
+******** <class 'pyscf.scf.uhf.UHF'> ********
+method = UHF
+initial guess = minao
+damping factor = 0
+level_shift factor = 0
+DIIS = <class 'pyscf.scf.diis.CDIIS'>
+diis_start_cycle = 1
+diis_space = 8
+SCF conv_tol = 1e-09
+SCF conv_tol_grad = None
+SCF max_cycles = 1
+direct_scf = True
+direct_scf_tol = 1e-13
+chkfile to save SCF result = /share/home/srwang/automr_inputlibrary/suhf_vs_gvb/Cr2_30_om/tmpyrrx876l
+max_memory 10000 MB (current use 69 MB)
+number electrons alpha = 24  beta = 24
+Set gradient conv threshold to 3.16228e-05
+init E= -2084.59856075811
+
+WARN: alpha nocc = 24  HOMO -0.192522920468821 >= LUMO -0.191879217925572
+
+
+WARN: beta  nocc = 24  HOMO -0.192513146977298 >= LUMO -0.191565671417815
+
+
+WARN: system HOMO -0.192513146977298 >= system LUMO -0.191565671417815
+
+cycle= 1 E= -2085.12058447775  delta_E= -0.522  |g|= 0.55  |ddm|=  1.8
+SCF not converged.
+SCF energy = -2085.12058447775 after 1 cycles  <S^2> = 3.9934154e-06  2S+1 = 1.000008
+
+Orthonormality check: j=  12 i=  65 maxv= 8.14484516E-09
+
+Orthonormality check: j=  65 i=  12 maxv= 8.14484525E-09
+
+
+******** <class 'pyscf.scf.uhf.UHF'> ********
+method = UHF
+initial guess = minao
+damping factor = 0
+level_shift factor = 0
+DIIS = <class 'pyscf.scf.diis.CDIIS'>
+diis_start_cycle = 1
+diis_space = 8
+SCF conv_tol = 1e-09
+SCF conv_tol_grad = None
+SCF max_cycles = 10
+direct_scf = True
+direct_scf_tol = 1e-13
+chkfile to save SCF result = /share/home/srwang/automr_inputlibrary/suhf_vs_gvb/Cr2_30_om/tmpyrrx876l
+max_memory 10000 MB (current use 235 MB)
+number electrons alpha = 24  beta = 24
+Set gradient conv threshold to 3.16228e-05
+init E= -2086.66989206159
+  alpha nocc = 24  HOMO = -0.223564528750047  LUMO = 0.0258324765366833
+  beta  nocc = 24  HOMO = -0.223564528844939  LUMO = 0.0258324765284263
+cycle= 1 E= -2086.66989307911  delta_E= -1.02e-06  |g|= 3.64e-08  |ddm|= 3.46e-08
+  alpha nocc = 24  HOMO = -0.223564526024468  LUMO = 0.02583247786549
+  beta  nocc = 24  HOMO = -0.223564525777754  LUMO = 0.0258324778640357
+cycle= 2 E= -2086.66989307911  delta_E= 2.27e-12  |g|= 2.55e-08  |ddm|= 3.08e-08
+  alpha nocc = 24  HOMO = -0.223564527796591  LUMO = 0.0258324768687217
+  beta  nocc = 24  HOMO = -0.223564528017452  LUMO = 0.0258324768769634
+Extra cycle  E= -2086.66989307911  delta_E= -1.82e-12  |g|= 1.88e-08  |ddm|= 2.33e-08
+converged SCF energy = -2086.66989307911  <S^2> = 5.6745694  2S+1 = 4.8680877
+
+The orthonormality of Alpha MO after PAO construction:
+maxv=    0.0000000000
+abs_mean=    0.0000000000
+
+PM orbital localization begins: using mulliken population
+natom=2
+niter=    1, sum_change=      0.0000000
+Localization converged successfully.
+Localization time(sec):0
+18 24 24 30
